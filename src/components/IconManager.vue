@@ -27,11 +27,20 @@ const iconMode = _.lowerCase(props.mode.value);
 
 let Icon: VNode<RendererNode, RendererElement>;
 if (brandName === "heroicons" && iconMode === "outline") {
-  Icon = _.get(HeroIconsOutline, `${iconName}Icon`);
+  const tmp = _.get(HeroIconsOutline, `${iconName}Icon`);
+  if (tmp !== undefined) {
+    Icon = tmp as VNode<RendererNode, RendererElement>;
+  }
 } else if (brandName === "heroicons" && iconMode === "solid") {
-  Icon = _.get(HeroIconsSolid, `${iconName}Icon`);
+  const tmp = _.get(HeroIconsSolid, `${iconName}Icon`);
+  if (tmp !== undefined) {
+    Icon = tmp as VNode<RendererNode, RendererElement>;
+  }
 } else if (brandName === "local") {
-  Icon = _.get(LocalIcons, `${iconName}Icon`);
+  const tmp = _.get(LocalIcons, `${iconName}Icon`);
+  if (tmp !== undefined) {
+    Icon = tmp as VNode<RendererNode, RendererElement>;
+  }
 } else {
   Icon = h("span", "Error loading icon");
 }
