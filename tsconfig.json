@@ -1,4 +1,7 @@
 {
+  "files": [
+    "global.d.ts",
+  ],
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -37,7 +40,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+],
   "exclude": [
     "node_modules"
   ],

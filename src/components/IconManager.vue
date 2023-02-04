@@ -47,5 +47,5 @@ if (brandName === "heroicons" && iconMode === "outline") {
 </script>
 
 <template>
-  <Icon />
+  <component :is="Icon" />
 </template>
