@@ -6,7 +6,7 @@ import LogoSVG from "./assets/logo.svg?component";
 
 <template>
   <header>
-    <LogoSVG alt="Vite logo" class="logo" />
+    <LogoSVG class="logo" />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
